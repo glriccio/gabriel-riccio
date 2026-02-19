@@ -1,0 +1,125 @@
+/* The star (*) selects ALL elements on the page */
+* {
+    margin: 0; /* Removes default spacing outside elements */
+    padding: 0; /* Removes default spacing inside elements */
+    box-sizing: border-box; /* Makes width/height easier to control */
+}
+
+/* Styles the entire webpage */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sets font style */
+    background-color: #121212; /* Dark background color */
+    color: white; /* Makes all text white by default */
+}
+
+/* Header section styling */
+header {
+    text-align: center; /* Centers text horizontally */
+    padding: 2rem; /* Adds space inside the header */
+    background: #1f1f1f; /* Slightly lighter dark background */
+}
+
+/* Main title styling */
+header h1 {
+    font-size: 2.5rem; /* Makes the main title large */
+}
+
+/* Main layout container */
+.container {
+    display: flex; /* Places children side-by-side */
+    min-height: 80vh; /* Makes section at least 80% of screen height */
+}
+
+/* Portfolio section (left side) */
+.portfolio {
+    width: 70%; /* Takes 70% of the horizontal space */
+    padding: 2rem; /* Adds space inside */
+    overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+/* Individual project cards */
+.project-card {
+    background: #1e1e1e; /* Card background color */
+    padding: 1.5rem; /* Space inside card */
+    margin-bottom: 1.5rem; /* Space between cards */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.2s ease; /* Smooth hover animation */
+}
+
+/* What happens when you hover over a card */
+.project-card:hover {
+    transform: scale(1.02); /* Slightly enlarges card */
+}
+
+/* Project title */
+.project-card h3 {
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+/* Project description text */
+.project-card p {
+    margin-bottom: 1rem; /* Space below paragraph */
+    color: #ccc; /* Light gray text */
+}
+
+/* Button styling */
+button {
+    padding: 0.5rem 1rem; /* Space inside button */
+    border: none; /* Removes border */
+    background: #00bcd4; /* Button color */
+    color: black; /* Text color */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Changes mouse to pointer */
+    border-radius: 4px; /* Slightly rounded edges */
+}
+
+/* Button hover effect */
+button:hover {
+    background: #00acc1; /* Slightly darker color */
+}
+
+/* Game section (right side) */
+.game-area {
+    width: 30%; /* Takes 30% of screen width */
+    padding: 2rem; /* Space inside */
+    background: #181818; /* Dark background */
+    border-left: 2px solid #333; /* Divider line between sections */
+}
+
+/* Game container box */
+#game-container {
+    margin-top: 1rem; /* Space above box */
+    height: 500px; /* Fixed height */
+    background: #000; /* Black background */
+    border-radius: 8px; /* Rounded edges */
+    display: flex; /* Enables centering */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    color: #555; /* Gray text */
+    font-size: 1.2rem; /* Slightly larger text */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Centers text */
+    padding: 1rem; /* Space inside footer */
+    background: #1f1f1f; /* Dark background */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+    
+    .container {
+        flex-direction: column; /* Stacks sections vertically */
+    }
+
+    .portfolio,
+    .game-area {
+        width: 100%; /* Each takes full width */
+    }
+
+    .game-area {
+        border-left: none; /* Removes side border */
+        border-top: 2px solid #333; /* Adds top border instead */
+    }
+}
